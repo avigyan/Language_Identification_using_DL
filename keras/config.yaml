@@ -1,0 +1,26 @@
+train_data_dir: "../target/training.csv"
+validation_data_dir: "../target/validation.csv"
+test_data_dir: "../target/testing.csv"
+
+batch_size: 1 #64
+learning_rate: 0.001
+num_epochs: 50
+
+data_loader: "ImageLoader"
+color_mode: "L"  # L = bw or RGB
+input_shape: [129, 500, 1]
+
+model: "squeezenet" # _finetune"
+
+segment_length: 10  # number of seconds each spectogram represents
+pixel_per_second: 50
+
+label_names: ["KN", "TM", "TE"]
+num_classes: 3
+
+# label_names: ["EN", "DE", "FR", "ES", "CN", "RUS"]
+# num_classes: 6
+
+
+
+
